@@ -1,20 +1,29 @@
 @import "settings";
 @import "foundation";
+@import "layout";
+
+// Jack-comment: Met de settings worden custom-settings toegepast als ik die uitcomment (volgens mij).
+// Dit werkt volgens mij precies hetzelfde als mijn config sass files, maar dan wat meer geadvanceerd.
+
+// Jack-comment: Ik maak dus, volgens de correcte werkstructuur een custom SCSS aan, waar ik al mijn styles nader in defineer en voortbouw op de Foundation // styles.
+
+// foundation import is gewoon het importen van foundation zelf. Als ik enkel modules van Foundation wil gebruiken, dan moet ik 
+// foundation daarboven uitcommenten, en de modules die ik wil gebruiken hieronder incommenten.
 
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
+//   "foundation/components/block-grid";
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
-//   "foundation/components/buttons",
+//   "foundation/components/buttons";
 //   "foundation/components/clearing",
 //   "foundation/components/dropdown",
 //   "foundation/components/dropdown-buttons",
 //   "foundation/components/flex-video",
 //   "foundation/components/forms",
-//   "foundation/components/grid",
+//   "foundation/components/grid";
 //   "foundation/components/inline-lists",
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",

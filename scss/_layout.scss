@@ -1,0 +1,126 @@
+.top-menu-bar-container{
+  @include grid-row();
+    background-color: $topbar-bg-color;
+    
+    .top-menu-logo {
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        
+        @media #{$medium-up} {
+            @include grid-column(5);
+        }
+ 
+        @media #{$large-up} {
+            @include grid-column(3);
+        }   
+
+        @media #{$xlarge-up} {
+            @include grid-column(3);
+        }
+  }
+    .top-menu-buttons {
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        
+        @media #{$medium-up} {
+            @include grid-column(7);
+        }
+ 
+        @media #{$large-up} {
+            @include grid-column(9);
+        }   
+
+        @media #{$xlarge-up} {
+            @include grid-column(9);
+        }
+  }
+}
+.slider-container{
+   @include grid-row(); 
+    
+    .slider{
+        @include grid-column(12);
+    }
+}
+.gallery-container{
+    @include grid-row(); 
+    
+    .gallery-header{
+        @include grid-column(12);
+    
+    }
+    .gallery-images{
+        @include grid-column(12);
+    
+    }
+}
+.content-container{
+    @include grid-row(); 
+    
+    .content-header{
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        @media #{$medium-up} {
+            @include grid-column(12);
+        }
+        @media #{$large-up} {
+            @include grid-column(9);
+        }  
+    }
+    .content-text{
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        @media #{$medium-up} {
+            @include grid-column(12);
+        }
+        @media #{$large-up} {
+            @include grid-column(9);
+        }  
+    }
+    .content-images{
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        @media #{$medium-up} {
+            @include grid-column(12);
+        }
+        @media #{$large-up} {
+            @include grid-column(3);
+        }  
+    }
+}
+.aboutme-container{
+    @include grid-row(); 
+    
+    .aboutme-info{
+        
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        
+        @media #{$medium-up} {
+            @include grid-column(8);
+        }
+    }
+    .aboutme-picture{
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
+        
+        @media #{$medium-up} {
+            @include grid-column(4);
+        }
+    
+    }
+}
+.footer-container{
+    @include grid-row(); 
+    
+    .footer{
+        @include grid-column(12);
+    }
+}
