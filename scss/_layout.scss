@@ -2,7 +2,7 @@
   @include grid-row();
     background-color: $topbar-bg-color;
     
-    .top-menu-logo {
+    .top-menu-logo-container {
         @media #{$small-up} {
             @include grid-column(12);
         }
@@ -19,7 +19,11 @@
             @include grid-column(3);
         }
   }
-    .top-menu-buttons {
+    .top-menu-buttons-container {
+        
+        position: relative;
+        top: 75px;
+        
         @media #{$small-up} {
             @include grid-column(12);
         }
@@ -38,10 +42,11 @@
   }
 }
 .slider-container{
-   @include grid-row(); 
+   @include grid-row();
+    margin-bottom:35px;
     
     .slider{
-        @include grid-column(12);
+//        @include grid-column(12);
     }
 }
 .gallery-container{
@@ -58,6 +63,7 @@
 }
 .content-container{
     @include grid-row(); 
+    margin-bottom: 25px;
     
     .content-header{
         @media #{$small-up} {
@@ -67,10 +73,10 @@
             @include grid-column(12);
         }
         @media #{$large-up} {
-            @include grid-column(9);
+            @include grid-column(12);
         }  
     }
-    .content-text{
+    .content-text-container{
         @media #{$small-up} {
             @include grid-column(12);
         }
@@ -81,7 +87,7 @@
             @include grid-column(9);
         }  
     }
-    .content-images{
+    .content-images-container{   
         @media #{$small-up} {
             @include grid-column(12);
         }
@@ -95,32 +101,64 @@
 }
 .aboutme-container{
     @include grid-row(); 
+    position:relative;
     
-    .aboutme-info{
-        
+    background-color: $topbar-bg-color;
+    border-top:1px solid $iron;
+    border-bottom:1px solid $iron;
+    
+    margin-bottom:25px;
+    
+    .aboutme-header{
         @media #{$small-up} {
             @include grid-column(12);
         }
-        
+        @media #{$medium-up} {
+            @include grid-column(12);
+        }
+        @media #{$large-up} {
+            @include grid-column(12);
+        }  
+    }
+    
+    .aboutme-text-container{
+        @media #{$small-up} {
+            @include grid-column(12);
+        }
         @media #{$medium-up} {
             @include grid-column(8);
         }
+        @media #{$large-up} {
+            @include grid-column(8);
+        }  
     }
-    .aboutme-picture{
+    .aboutme-images-container{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        
         @media #{$small-up} {
             @include grid-column(12);
         }
-        
         @media #{$medium-up} {
             @include grid-column(4);
         }
+        @media #{$large-up} {
+            @include grid-column(4);
+        }  
     
     }
 }
 .footer-container{
     @include grid-row(); 
     
+    background-color: $secondary-color;
+    border-top:1px solid $iron;
+    
     .footer{
         @include grid-column(12);
+        
+        text-align:center;
+        margin-top:25px;
     }
 }

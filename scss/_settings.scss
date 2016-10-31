@@ -12,7 +12,7 @@
 // c. Global
 // d. Media Query Ranges
 // e. Typography
-// 01. Accordion
+// 01. Accordion (like panels in bootstrap which can contain content underneath when expanded)
 // 02. Alert Boxes
 // 03. Block Grid
 // 04. Breadcrumbs
@@ -23,29 +23,29 @@
 // 09. Dropdown Buttons
 // 10. Flex Video
 // 11. Forms
-// 12. Icon Bar
+// 12. Icon Bar (icon bar buttons row. usefull for navigation or such)
 // 13. Inline Lists
-// 14. Joyride
-// 15. Keystrokes
+// 14. Joyride (awesome tour-like buttons which the user must follow)
+// 15. Keystrokes (keystroke/keyinstruction textboxes)
 // 16. Labels
-// 17. Magellan
+// 17. Magellan (sticky navigation bar)
 // 18. Off-canvas
-// 19. Orbit
+// 19. Orbit (responsive slider for images!!!)
 // 20. Pagination
 // 21. Panels
 // 22. Pricing Tables
-// 23. Progress Bar
-// 24. Range Slider
-// 25. Reveal
+// 23. Progress Bar (as said.. progress bar)
+// 24. Range Slider (input range slider)
+// 25. Reveal (like an alert message box)
 // 26. Side Nav
 // 27. Split Buttons
 // 28. Sub Nav
-// 29. Switch
+// 29. Switch (input switches)
 // 30. Tables
-// 31. Tabs
+// 31. Tabs (tab-buttons)
 // 32. Thumbnails
 // 33. Tooltips
-// 34. Top Bar
+// 34. Top Bar (as said,.. a small top bar with button or a title,..)
 // 36. Visibility Classes
 
 // a. Base
@@ -87,9 +87,16 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
- $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
- $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
- $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+ $font-family-default: OpenSans, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 // We use these to define default font weights
  $font-weight-normal: normal;
@@ -111,12 +118,21 @@ $include-html-global-classes: $include-html-classes;
  $steel       : #666666;
  $charcoal    : #555555;
  $tuatara     : #444444;
+ $obsidian    : #383838;
  $oil         : #333333;
  $jet         : #222222;
  $black       : #000000;
 
+ $yellow      : #E0B309;
+ $dark-yellow : #C29B08;
+
+ $red         : #ea2c20;
+ $dark-red    : #c5050c;
+
+
+
 // We use these as default colors throughout
- $primary-color: #008CBA;
+ $primary-color: white;
  $secondary-color: #e7e7e7;
  $alert-color: #f04124;
  $success-color: #43AC6A;
@@ -124,14 +140,15 @@ $include-html-global-classes: $include-html-classes;
  $info-color: #a0d3e8;
 
 // We use these to control various global styles
- $body-bg: $primary-color;
+ $body-bgcolor-1: $secondary-color;
+ $body-bgcolor-2: $primary-color;
  $body-font-color: $jet;
- $body-font-family: $font-family-sans-serif;
+ $body-font-family: $font-family-default;
  $body-font-weight: $font-weight-normal;
  $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -210,18 +227,18 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+ $header-font-family: $font-family-default;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+ $header-font-color: $obsidian;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
+ $header-bottom-margin: 1rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
 // $h1-font-size: rem-calc(44);
- $h1-font-size: rem-calc(44);
+ $h1-font-size: rem-calc(35);
 // $h2-font-size: rem-calc(37);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
@@ -248,15 +265,15 @@ $include-html-global-classes: $include-html-classes;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
+ $paragraph-font-family: $font-family-default;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+ $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
-// $paragraph-text-rendering: optimizeLegibility;
+ $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
 // $code-color: $oil;
@@ -452,10 +469,10 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
-// $button-font-lrg: rem-calc(20);
+ $button-font-tny: rem-calc(14);
+ $button-font-sml: rem-calc(14);
+ $button-font-med: rem-calc(18);
+ $button-font-lrg: rem-calc(18);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;
 
@@ -567,7 +584,7 @@ $include-html-global-classes: $include-html-classes;
 // $f-dropdown-font-size: rem-calc(14);
 // $f-dropdown-list-padding: rem-calc(5, 10);
 // $f-dropdown-line-height: rem-calc(18);
-// $f-dropdown-list-hover-bg: $smoke;
+ $f-dropdown-list-hover-bg: $red;
 // $dropdown-mobile-default-float: 0;
 
 // We use this to control the styles for when the dropdown has custom content.
@@ -930,9 +947,9 @@ $include-html-global-classes: $include-html-classes;
 // $orbit-timer-show-progress-bar: true;
 
 // We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: $iron;
-// $orbit-bullet-nav-color-active: $aluminum;
-// $orbit-bullet-radius: rem-calc(9);
+ $orbit-bullet-nav-color: $yellow;
+ $orbit-bullet-nav-color-active: $black;
+ $orbit-bullet-radius: rem-calc(15);
 
 // We use these to controls the style of slide numbers
 // $orbit-slide-number-bg: rgba(0,0,0,0);
@@ -1401,8 +1418,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: $secondary-color;
+// $topbar-bg: $secondary-color;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
@@ -1421,13 +1438,13 @@ $topbar-bg-color: $oil;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $jet;
-// $topbar-link-bg-color-hover: $charcoal;
+// $topbar-link-bg-hover: $red;
+// $topbar-link-bg-color-hover: $yellow;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
-// $topbar-link-padding: ($topbar-height / 3);
+//// $topbar-link-padding: ($topbar-height / 3);
 // $topbar-back-link-size: rem-calc(18);
 // $topbar-link-dropdown-padding: rem-calc(20);
 // $topbar-button-font-size: .75rem;
@@ -1436,14 +1453,14 @@ $topbar-bg-color: $oil;
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
 // $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
+// $topbar-dropdown-link-color-hover: $red;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-bg-hover: $jet;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
 // $topbar-dropdown-toggle-alpha: .4;
-
+//
 // $topbar-dropdown-label-color: $monsoon;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;

@@ -1,0 +1,48 @@
+.content-text{
+
+    font-size: 0.8rem;
+    
+    &--head{
+        font-size: $paragraph-font-size;
+    }
+}
+
+.aboutme-text{
+
+    font-size: 0.8rem;
+    
+    &--head{
+        font-size: $paragraph-font-size;
+    }
+}
+.footer-text{
+    font-size: 0.6rem;
+}
+
+.link{
+
+    color: $jet;
+    
+    &:hover, &:focus{
+        color:$black;
+        text-decoration: underline;
+    }
+    
+    &--yellow{
+        color: $yellow;
+        
+        &:hover, &:focus{
+            color:$dark-yellow;
+            text-decoration: underline;
+        }
+    }
+    
+    &--red{
+        color:$red;
+        
+        &:hover, &:focus{
+            color:$dark-red;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@mixin two-color-vertical-gradient-background($colorTop, $colorBottom){
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0b309+0,c29b08+100 */
+    background: $colorTop !important; /* Old browsers */
+    background: -moz-linear-gradient(top,  $colorTop 0%, $colorBottom 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  $colorTop 0%, $colorBottom 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  $colorTop 0%, $colorBottom 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$colorTop}', endColorstr='#{$colorBottom}',GradientType=0 ) !important; /* IE6-9 */
+}

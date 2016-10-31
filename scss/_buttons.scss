@@ -1,0 +1,64 @@
+//.slider-buttons{
+//    position: absolute;
+//    bottom: 5px;
+//    
+//    width: 100%;
+//    
+//    text-align: center;
+//}
+//.slider-button{
+////    background-color: #f85032;
+////    background: @include filter-gradient(#f85032, #e73827, horizontal);
+////    // IE9 SVG, needs conditional override of 'filter' to 'none'$experimental-support-for-svg: true;
+////    background: @include background-image(linear-gradient(left, #f85032 0%, #e73827 100%));
+//    
+//    width: 5px;
+//    height: 5px;
+//    padding: 10px;
+//}
+
+.orbit-bullets-container{
+    .orbit-bullets{
+        li{
+            @include two-color-vertical-gradient-background($yellow, $dark-yellow);
+            border-color:$dark-yellow;
+            -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+            box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+        }
+        li.active{
+            @include two-color-vertical-gradient-background($red, $dark-red);
+            border-color:$dark-red;
+        }
+    }
+}
+
+
+.button-gradient{
+// custom mixin
+// @include button($padding,$bg,$radius,$full-width,$disabled);
+    @include button(rem-calc(10), $base, rem-calc(12));
+    border:1px solid $base;
+    
+    &--yellow{
+        @include two-color-vertical-gradient-background($yellow, $dark-yellow);
+        border-color:$dark-yellow;
+        
+        &:hover,&:focus{
+            @include two-color-vertical-gradient-background(lighten($yellow, 5%), $dark-yellow);
+        }
+    }
+    
+    &--red{
+        @include two-color-vertical-gradient-background($red, $dark-red);
+        border-color:$dark-red;
+        
+        &:hover,&:focus{
+            @include two-color-vertical-gradient-background(lighten($red, 5%), $dark-red);
+        }
+    }
+    
+    span[class^="fi"]{
+        margin-right:5px;
+    }
+}

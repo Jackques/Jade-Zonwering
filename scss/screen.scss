@@ -1,6 +1,15 @@
 @import "settings";
 @import "foundation";
+
+@import "util";
+@import "menu";
 @import "layout";
+@import "images";
+@import "text";
+@import "buttons";
+
+
+/* By default the _settings.scss is imported here - @import "settings" as well as all of Foundation SCSS - @import "foundation". If you don't want all of Foundation you can comment it out and then activate the individual imports you want below including the @import on line 5. */
 
 // Jack-comment: Met de settings worden custom-settings toegepast als ik die uitcomment (volgens mij).
 // Dit werkt volgens mij precies hetzelfde als mijn config sass files, maar dan wat meer geadvanceerd.
@@ -14,16 +23,16 @@
 // @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid";
+//   "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
-//   "foundation/components/buttons";
+//   "foundation/components/buttons",
 //   "foundation/components/clearing",
 //   "foundation/components/dropdown",
 //   "foundation/components/dropdown-buttons",
 //   "foundation/components/flex-video",
 //   "foundation/components/forms",
-//   "foundation/components/grid";
+//   "foundation/components/grid",
 //   "foundation/components/inline-lists",
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",

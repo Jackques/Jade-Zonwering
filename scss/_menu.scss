@@ -1,0 +1,102 @@
+.top-bar-section {
+    
+    top: 10px;
+    
+    li.has-dropdown.not-click {
+            margin-right: 10px;
+            @include two-color-vertical-gradient-background($red, $dark-red);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        
+        a{
+            color: $white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            @include two-color-vertical-gradient-background($red, $dark-red);
+            border-color: $dark-red;
+            
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            
+            &:hover,
+            &:focus {
+                @include two-color-vertical-gradient-background(lighten($red, 5%), $dark-red);
+            }
+            &:after {
+                color: $white;
+            }
+        }
+            
+        ul.dropdown {
+                background-color: $red;
+            
+            li:not(.has-form):not(.active){
+                background:$red;
+                
+                &:hover,&:focus{
+                    @include two-color-vertical-gradient-background($red, $dark-red);
+                    
+                    a:not(.button){
+                        @include two-color-vertical-gradient-background($red, $dark-red);
+                    }
+                }
+                
+                a:not(.button){
+                    @include two-color-vertical-gradient-background($red, $dark-red);
+                     font-size: 0.8rem;
+                }
+            }
+            
+            li a.parent-link.js-generated{
+                @include two-color-vertical-gradient-background($red, $dark-red);
+            }
+            
+            li.active{
+                @include two-color-vertical-gradient-background($red, $dark-red);
+            }
+            li.active a{
+                @include two-color-vertical-gradient-background($red, $dark-red);
+                font-size: 0.8rem;
+            }
+        }
+            
+//            a:not(.button) {
+//               
+//            }
+            
+//            &.active a {
+//                color: $white;
+//                font-size: 1.0rem;
+//                font-weight: bold;
+//                @include two-color-vertical-gradient-background($yellow, $dark-yellow);
+//                border-color: $dark-yellow;
+//                &:hover,
+//                &:focus {
+//                    @include two-color-vertical-gradient-background(lighten($yellow, 5%), $dark-yellow);
+//                }
+//            }
+            
+        
+        
+    }
+    
+    li.active:not(.has-form){
+        
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+        a:not(.button){
+                font-size: 1.2rem;
+                font-weight: bold;
+                @include two-color-vertical-gradient-background($yellow, $dark-yellow);
+                border-color: $dark-yellow;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+        
+                &:hover,
+                &:focus {
+                    @include two-color-vertical-gradient-background(lighten($yellow, 5%), $dark-yellow);
+                }
+        }
+    }
+}
