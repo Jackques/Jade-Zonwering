@@ -1,0 +1,1 @@
+Added a second test file to test the fast forward merge
